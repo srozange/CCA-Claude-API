@@ -1,0 +1,39 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in neuromorphic computing leverage principles from neuroscience to develop artificial neural networks that emulate biological brain structures, particularly focusing on spiking neural networks that process information through temporal spike patterns rather than continuous activation values. These systems integrate insights from cognitive psychology regarding attention mechanisms and working memory constraints, while simultaneously employing machine learning algorithms optimized for edge devices with limited computational resources. The interdisciplinary approach combines neurotransmitter dynamics modeling with backpropagation variants, addressing challenges in both biological plausibility and algorithmic efficiency. Furthermore, this paradigm shift in artificial intelligence architecture has implications for understanding human perception, memory consolidation, and decision-making processes, creating a feedback loop between computational neuroscience and psychological theory that advances our comprehension of cognition at multiple levels of analysis."
+    },
+    "solution_criteria": [
+      "Extracts all distinct topics including neuromorphic computing, spiking neural networks, cognitive psychology, attention mechanisms, working memory, machine learning, edge computing, neurotransmitter dynamics, backpropagation, biological plausibility, human perception, and memory consolidation",
+      "Disambiguates overlapping concepts (e.g., distinguishes between 'neural networks' as a computer science topic and 'neurotransmitter dynamics' as a neuroscience topic)",
+      "Returns output as a valid JSON array of strings with no duplicates"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a dense multi-disciplinary passage containing overlapping topics (e.g., neuroscience, psychology, and computer science) to evaluate whether the prompt can accurately identify and disambiguate related but distinct topics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in CRISPR-Cas9 gene editing have revolutionized functional genomics research, enabling precise modifications of target DNA sequences with unprecedented efficiency. RNA sequencing (RNA-seq) technologies coupled with single-cell analysis have facilitated comprehensive transcriptomic profiling, revealing cell-type-specific gene expression patterns and genotype-phenotype associations. Integration of GWAS (genome-wide association studies) data with epigenetic modifications, including histone acetylation and DNA methylation patterns, has illuminated the regulatory mechanisms controlling complex trait heritability. Furthermore, high-throughput CRISPR screening combined with machine learning algorithms has accelerated the identification of novel therapeutic targets in cancer genomics, demonstrating superior performance compared to traditional candidate gene approaches."
+    },
+    "solution_criteria": [
+      "Extracts all major technical topics without over-segmenting acronyms or methodology descriptors into separate topics (e.g., 'CRISPR-Cas9' should be recognized as a single topic, not split)",
+      "Identifies domain-specific jargon terms as distinct topics (e.g., 'RNA sequencing', 'transcriptomic profiling', 'epigenetic modifications')",
+      "Returns output as a JSON array of strings with no additional metadata or explanations"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a highly specialized passage containing domain-specific jargon and acronyms (e.g., molecular biology with terms like 'CRISPR', 'RNA sequencing', 'genotype') to assess accuracy in extracting technical topics without over-segmentation"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in neuroplasticity research have demonstrated that the adult brain retains considerable capacity for structural reorganization in response to behavioral demands. Studies employing functional magnetic resonance imaging (fMRI) reveal significant activation patterns in the motor cortex during both physical exercise and mental imagery of movement, suggesting shared neural substrates. Furthermore, longitudinal investigations of musicians and polyglots indicate enhanced gray matter volume in regions associated with auditory processing and language comprehension, implying that sustained cognitive practice drives anatomical brain changes. These findings challenge the classical neuroscientific dogma of brain immutability and underscore the importance of environmental enrichment in clinical rehabilitation protocols for stroke and traumatic brain injury patients."
+    },
+    "solution_criteria": [
+      "Extraction must include all explicitly stated topics (neuroplasticity, fMRI, motor cortex, gray matter volume, brain reorganization)",
+      "Extraction should identify underlying themes inferred from context (neural plasticity, cognitive development, clinical applications, brain imaging)",
+      "Topics should be formatted as a JSON array of strings",
+      "Distinguish between directly mentioned topics and inferred contextual themes in the evaluation"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a passage containing implicit and explicit topics, where some topics are directly stated while others must be inferred from context, to evaluate whether the prompt extracts only explicitly mentioned topics or also identifies underlying themes"
+  }
+]

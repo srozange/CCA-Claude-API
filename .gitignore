@@ -1,0 +1,37 @@
+.envrc
+
+# --- Environnements virtuels Python ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Bytecode / cache Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Secrets / configuration locale ---
+.env
+.env.*
+*.local
+
+# --- Fichiers générés par les scripts / notebooks ---
+output.html
+output.json
+
+# --- Outils / IDE ---
+.idea/
+.vscode/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
